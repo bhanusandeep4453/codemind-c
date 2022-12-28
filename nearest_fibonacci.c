@@ -1,24 +1,16 @@
 #include<stdio.h>
-int main()
-{
-    int a=0,b=1,c=0,n;
+int main(){
+    int n,f=0,s=1,nxt=0;
     scanf("%d",&n);
-    while(n>c)
-    {
-        c=a+b;
-        a=b;
-        b=c;
+    while(n>nxt){
+        nxt=f+s;
+        f=s;
+        s=nxt;
     }
-    if(n-a<b-n)
-    {
-        printf("%d ",a);
-    }
-    else if(n-a==b-n)
-    {
-        printf("%d %d",a,b);
-    }
+    if(n-f<s-n)
+    printf("%d",f);
+    else if(n-f==s-n)
+    printf("%d %d",f,s);
     else
-    {
-        printf("%d ",b);
-    }
+    printf("%d",s);
 }
